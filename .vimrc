@@ -16,6 +16,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'noahfrederick/vim-laravel'
   Plug 'wakatime/vim-wakatime'
   Plug 'mileszs/ack.vim'
+  Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 syntax on
@@ -62,6 +63,10 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 nmap <F8> :TagbarToggle<CR>
+
 let g:vue_disable_pre_processors = 1
 
 autocmd FileType vue syntax sync fromstart
+
+autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2
+autocmd Filetype vue setlocal tabstop=2 shiftwidth=2 expandtab
